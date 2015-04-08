@@ -9,7 +9,67 @@
   <h1>Travel Guessing Game</h1>
   <h2>Guess where Molly has been, and where she's going next!</h2>
   <p>Capitalization doesn't count, but <em>spelling does</em>.</p>
-  <button id="play-round1">Play Now</button>
+
+
+  <main>
+    <section id="round1">
+      <h3>How many states has Molly visited?</h3>
+        <form name="round1-guess" id="round1-guess">
+          <label for="guessVisited">Enter your guess: </label>
+          <input type="text" id="guessVisited" size="4" maxlength="2">
+          <button type="submit">Submit</button>
+        </form>
+        <p id="51+">Umm...How many states are there, again?</p>
+        <p id=">37">Nope, Molly isn't even close to that well traveled.</p>
+        <p id=">32">Close, but too high!</p>
+        <p id="<32">Close, but too low!</p>
+        <p id="<28">Nope, Molly has been to way more states than that</p>
+        <p id="invalid">I didn't understand your answer - try again!</p>
+        <p id="wonRound1">You got it! Molly has visited 32 states.</p>
+        <img src="images/visited-states.png" />
+    </section>
+    <section id="round2">
+      <section id="map">
+        <h3>Molly has 18 states left to visit. Where is she going next?</h3>
+        <img src="images/unvisited-states.png" />
+        <form name="round2-guess" id="round2-guess">
+          <label for="guessNext">Guess a state:</label>
+          <input type="text" id="guessNext" name="guessNext" placeholder="State name">
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section id="possibilities">
+        <h4>Possibilities:</h4>
+        <ul>
+          <li>Nebraska</li>
+          <li>Michigan</li>
+          <li>Indiana</li>
+          <li>Ohio</li>
+          <li>Kentucky</li>
+          <li>Oklahoma</li>
+          <li>Kansas</li>
+          <li>Missouri</li>
+          <li>Arkansas</li>
+          <li>Georgia</li>
+          <li>Florida</li>
+          <li>Tennessee</li>
+          <li>South Carolina</li>
+          <li>North Carolina</li>
+          <li>Connecticut</li>
+          <li>West Virginia</li>
+          <li>Delaware</li>
+          <li>New Jersey</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p>Check out this cool site to <a href="http://www.amcharts.com/visited_states/">make your own maps</a> of the places you've been!</p>
+  </footer>
 <script src="scripts/guess.js"></script>
 </body>
 </html>
+
+
+
+  
