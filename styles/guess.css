@@ -1,5 +1,5 @@
 body {
-  color: #08003D;
+  color: #000;
   font-size: 1.2em;
   font-family: 'Raleway', sans-serif;
 }
@@ -17,6 +17,9 @@ header {
 main {
   margin: 1em auto;
   border: 1px solid #dedede;
+}
+h1 {
+  color: #08003D;
 }
 h1 {
   font-size: 140%;
@@ -38,6 +41,8 @@ footer {
   height: 50px;
   text-align: center;
   font-size: 80%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 footer p {
   padding-top: 20px;
@@ -129,13 +134,17 @@ margin: .5em 1em 1em 1em;
 #possibilities ul {
   list-style: circle;
 }
-#possibilities li {
+#possibilities li, #hints li {
   padding: .2em;
 }
-#hints p {
-  margin: .7em 1em;
+#hints h3 {
+  margin: .3em 1em;
 }
-#hints ul {
+#hints ol {
+  margin: .7em 2em;
+}
+#fail-msg p, #congrats2 p {
   margin: .7em 1em;
-  list-style: disc; 
+  font-size: 110%;
+  font-weight: bold;
 }

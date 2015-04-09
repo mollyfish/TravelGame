@@ -88,7 +88,6 @@
     event.preventDefault();
     var answer2 = 'tennessee';
     var guessRnd2 = (document.getElementById('guessNext').value).toLowerCase();
-    console.log(guessRnd2);
     event.target.guessNext.value = '';
 
     if (guessRnd2 === answer2) {
@@ -102,7 +101,6 @@
       var wonRound2 = document.getElementById('congrats2')
       wonRound2.setAttribute('class', 'showthis')
     } else {
-      console.log('Guess again!');
       var el = document.getElementById('hints')
       el.setAttribute('class', 'showthis')
         if (guesses === 0) {
@@ -114,34 +112,45 @@
         } else if (guesses === 1) {
           var el = document.getElementById('hint2')
           el.setAttribute('class', 'showthis')
+          var guess = (document.getElementById('guessNext').value).toLowerCase();
+          console.log(guess);
+          guess.innerHTML = '<del>' + guess + '</del>';
           guesses++;
           console.log(guesses);
           event.target.guessNext.value = '';
         } else if (guesses === 2) {
           var el = document.getElementById('hint3')
           el.setAttribute('class', 'showthis')
+          var guess = (document.getElementById('guessNext').value).toLowerCase();
+          guess.innerHTML = '<del>' + guess + '</del>';
           guesses++;
           console.log(guesses);
           event.target.guessNext.value = '';
         } else if (guesses === 3) {
           var el = document.getElementById('hint4')
           el.setAttribute('class', 'showthis')
+          var guess = (document.getElementById('guessNext').value).toLowerCase();
+          guess.innerHTML = '<del>' + guess + '</del>';
           guesses++;
           console.log(guesses);
           event.target.guessNext.value = '';
         } else if (guesses === 4) {
           var el = document.getElementById('hint5')
           el.setAttribute('class', 'showthis')
+          var guess = (document.getElementById('guessNext').value).toLowerCase();
+          guess.innerHTML = '<del>' + guess + '</del>';
           guesses++;
           console.log(guesses);
           event.target.guessNext.value = '';
         } else {
-          var guessForm = document.getElementById('next-state')
+          var guessForm = document.getElementById('round2-guess')
           guessForm.setAttribute('class', 'hidethis')
           var hideHints = document.getElementById('hints')
           hideHints.setAttribute('class', 'hidethis')
           var lostRound2 = document.getElementById('fail-msg')
           lostRound2.setAttribute('class', 'showthis')
+          var elImg = document.getElementById('visited-map');
+          elImg.setAttribute('src', 'images/TN.png');
         }
       } 
     };
