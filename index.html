@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Travel Guessing Game</title>
   <link rel="stylesheet" type="text/css" href="styles/reset.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="styles/guess.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
 
   <main>
     <section id="round1" class="hidethis">
+      <img id="blank-map" src="images/us-map.png" />
       <h3>How many states has Molly visited?</h3>
         <form name="round1-guess" id="round1-guess" class="showthis">
           <label for="guessVisited">Enter your guess: </label>
@@ -28,23 +29,24 @@
         <p id="<32" class="hidethis">Close, but too low!</p>
         <p id="<28" class="hidethis">Nope, far too low.</p>
         <p id="invalid" class="hidethis">I didn't understand your answer - try again!</p>
-        <p id="wonRound1" class="hidethis">You got it! Molly has visited 32 states.<br />
-        <img src="images/visited-states.png" /><br /><button id="play-now-2">Play Round 2</button></p>
+        <p id="wonRound1" class="hidethis">You got it! Molly has visited 32 states.</p>
+        <button id="play-now-2" class="hidethis">Guess where Molly<br />will go next »</button>
     </section>
 
       <section id="whereTo" class="hidethis">
         <section id="map">
           <h3>Molly has 18 states left to visit. Where is she going next?</h3>
-          <p><em>Pay attention to your spelling!</em></p>
+          <img src="images/unvisited-states.png" />
           <form name="round2-guess" id="round2-guess">
             <label for="guessNext">Guess a state:</label>
             <input type="text" id="guessNext" name="guessNext" placeholder="State name">
             <button type="submit">Submit</button>
           </form>
-          <img src="images/unvisited-states.png" />
         </section>
         <section id="possibilities">
-          <h4>Possibilities:</h4>
+          <h4>Possibilities <span class="reminder">(pay attention to your spelling!)</span>:</h4>
+          <section class="columns">
+          <section class="col-one">
           <ul>
             <li>Nebraska</li>
             <li>Michigan</li>
@@ -52,12 +54,20 @@
             <li>Ohio</li>
             <li>Kentucky</li>
             <li>Oklahoma</li>
-            <li>Kansas</li>
-            <li>Missouri</li>
-            <li>Arkansas</li>
+          </ul>
+          </section>
+          <section class="col-two">
+          <ul>
             <li>Georgia</li>
             <li>Florida</li>
             <li>Tennessee</li>
+            <li>Kansas</li>
+            <li>Missouri</li>
+            <li>Arkansas</li>
+          </ul>
+          </section>
+          <section class="col-three">
+          <ul>
             <li>South Carolina</li>
             <li>North Carolina</li>
             <li>Connecticut</li>
@@ -65,6 +75,8 @@
             <li>Delaware</li>
             <li>New Jersey</li>
           </ul>
+          </section>
+          </section>
         </section>
       </section>
 
@@ -86,7 +98,7 @@
       </section>
   </main>
   <footer>
-    <p>Check out this cool site to <a href="http://www.amcharts.com/visited_states/">make your own maps</a> of the places you've been!</p>
+    <p>Wondering how we made these maps? It's easy! <a href="http://www.amcharts.com/visited_states/">Check it out for yourself</a>.</p>
   </footer>
 <script src="scripts/events.js"></script>
 </body>

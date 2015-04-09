@@ -7,17 +7,31 @@ header, main, footer {
   width: 70%;
   margin: 0 auto;
   background-color: #efefef;
+  border-radius: 8px;
 }
 header {
   text-align: center;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+main {
+  margin: 1em auto;
+  border: 1px solid #dedede;
 }
 h1 {
   font-size: 140%;
   padding-top: .4em;
 }
 h2 {
+  font-size: 120%;
+  margin: .8em 0;
+  padding-bottom: 15px;
+}
+h3 {
+  display: inline-block;
   font-size: 110%;
-  padding-top: .2em;
+  font-weight: bold;
+  margin: .7em .4em .7em 1em;
 }
 footer {
   background-color: #afafaf;
@@ -31,15 +45,97 @@ footer p {
 img {
   width: 25%;
 }
-
 form {
   display: block;
 }
-
+label {
+  font-style: italic;
+  font-size: 80%; 
+}
+.reminder {
+  font-style: italic;
+  font-size: 80%;
+  color: ; 
+}
 .hidethis {
   display: none;
 }
-
 .showthis {
   display: block;
+}
+.columns {
+  width: 72%;
+  overflow: auto;
+}
+.col-one, .col-two, .col-three {
+  width: 24%;
+  padding: 1%;
+  padding-left: 2em;
+  float: left;
+}
+#play-now {
+  margin: 0 0 1em 0;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 180%;
+  text-shadow: 1px 1px 3px #000;
+  background-image: url("../images/small-us-map.png");
+  width: 368px;
+  height: 249px;
+  border-radius: 8px;
+  border: 3px solid #08003D;
+  border-bottom-color: #191705;
+  border-right-color: #191705;
+  cursor: pointer;
+}
+#play-now-2 {
+  color: #fff;
+  background-color: #535363;
+  font-family: 'Raleway', sans-serif;
+  font-size: 80%;
+  width: 14em;
+  height: 4em;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  border-bottom-color: #afafaf;
+  border-right-color: #afafaf;
+  cursor: pointer;
+  margin: 1em 2em;
+}
+#round1 {
+  height: 10em;
+}
+#round1 img {
+  float: right;
+  margin: .7em 1em;
+}
+#map img {
+  float: right;
+  margin-top: .7em;
+  margin-right: 1em;
+}
+#round1 form, #round1 p {
+  margin: .7em 1em;
+}
+#map {
+  height: ;
+}
+#map form {
+margin: .5em 1em 1em 1em;
+}
+#possibilities {
+  margin: .7em 1em;
+}
+#possibilities ul {
+  list-style: circle;
+}
+#possibilities li {
+  padding: .2em;
+}
+#hints p {
+  margin: .7em 1em;
+}
+#hints ul {
+  margin: .7em 1em;
+  list-style: disc; 
 }

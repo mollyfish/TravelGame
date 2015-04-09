@@ -38,10 +38,14 @@
     while (true) {
       if (answer1 === guessRnd1) {
         clearClues();
-        var el = document.getElementById('wonRound1');
-        el.setAttribute('class', 'showthis');
+        var elMsg = document.getElementById('wonRound1');
+        elMsg.setAttribute('class', 'showthis');
+        var elButton = document.getElementById('play-now-2');
+        elButton.setAttribute('class', 'showthis');
         var elForm = document.getElementById('round1-guess');
         elForm.setAttribute('class', 'hidethis');
+        var elImg = document.getElementById('blank-map');
+        elImg.setAttribute('src', 'images/visited-states.png');
         break;
       } else if (guessRnd1 >= 51) {
         clearClues();
